@@ -17,7 +17,7 @@ var baseRequest = request.defaults({
 process.stdin
   .pipe(es.split())
   .pipe(es.map(function(num, cb) {
-    if(!parseInt(num, 10)) cb();
+    if(!parseInt(num, 10)) return cb();
 
     var url = '{b}/spaces/{s}/tickets/{#}.json'.replace('{b}', config.url).replace('{s}', config.space).replace('{#}', num);
     baseRequest.get(url, function(err, res, body) {
