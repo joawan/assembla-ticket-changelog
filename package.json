@@ -12,9 +12,14 @@
   "engines": {
     "node": ">=0.10.0"
   },
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint ./*.js"
+  },
   "dependencies": {
     "event-stream": "^3.1.7",
     "request": "^2.44.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jshint": "^2.5.6"
+  }
 }
