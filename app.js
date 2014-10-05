@@ -6,7 +6,6 @@ var request = require('request'),
   es = require('event-stream'),
   config = require('./config.js');
 
-//request.debug = true;
 var baseRequest = request.defaults({
   headers: {
     'X-Api-Key': config.key,
